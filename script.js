@@ -1,20 +1,12 @@
 // complete the given function
 
 function palindrome(str){
+	str = str.toLowerCase();
+	str.replace(" ", "");
 let i = 0;
-	let j = str.length() - 1;
+	let j = str.length - 1;
 	while(i < j){
-		if(str.charAt(i) ==  ' '){
-			i++;
-		}
-		else if(str.charAt(j) ==  ' '){
-			j--;
-		}
-		else if(str.charAt(i) === str.charAt(j)){
-			i++;
-			j--;
-		}
-		else{
+		if(str[i] !== str[j]){
 			return false;
 		}
 	}
